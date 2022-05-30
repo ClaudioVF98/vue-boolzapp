@@ -3,14 +3,14 @@
 }
 
 .container-fluid {
-    background-color: lightgray;
+    background-color: #dbdbd2;
     height: 100vh;
     z-index: 1;
     position: absolute;
 }
 
-.col-12 {
-    background-color: rgb(0, 139, 63); 
+.container-fluid .row .col-12 {
+    background-color: #009688; 
     height: 200px;
 }
 
@@ -19,5 +19,69 @@
     background-color: red;
     z-index: 2;
     position: relative;
-    top: 50px;
+    top: 5vh;
+}
+
+#row1 {
+    height: 100%
+}
+
+#macro-col-4 {
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+#macro-col-8 {
+    height: 100%;
+    background-color: blue;
+}
+
+.logo {
+    padding: 20px 10px;
+}
+
+.logo img {
+    width: 20%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#profile {
+    background-color: #eaeaea;
+}
+
+#macro-col-4 a {
+    text-decoration: none;
+    color: gray;
+    margin: 0 10px;
+}
+
+#notification {
+    background-color: #8edafc;
+}
+
+.notification-icon {
+    margin-right: 20px;
+}
+
+.notification-icon i{
+    font-size: 20px;
+    color: #8edafc;
+    border: 1px white solid;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#notification-activation {
+    text-decoration: underline;
+}
+
+.search-icon {
+    border: 1px #8c8c9c solid;
+    background-color: white;
+}
+
+.label-search {
+    width: 99%;
 }
