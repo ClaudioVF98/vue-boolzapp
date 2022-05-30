@@ -85,3 +85,17 @@
 .label-search {
     width: 99%;
 }
+
+#contatti img {
+    width: 90%;
+    border-radius: 100%;
+}
+
+.bc-white {
+    background-color: white;
+}
+
+.time, .last-msg{
+    font-size: 14px;
+    color: gray;
+}

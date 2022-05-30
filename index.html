@@ -21,9 +21,10 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="app">
         <div class="row" id="row1">
             <div class="col-4" id="macro-col-4">
+                <!-- Profilo, Notifiche e Cerca -->
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center" id="profile">
                         <div class="logo d-inline-block ">
@@ -60,6 +61,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Lista chat -->
+                <div class="row mt-2" id="contatti">
+                    <div class="col-12 d-flex bc-white py-3" v-for="(contact,i) in contacts" :key="i">
+                        <div class="col-2 avatar">                                                                                              
+                            <img :src="contact.avatar" alt="">
+                        </div>
+                        <div class="col-10 px-3">
+                            <div class="d-flex justify-content-between">
+                                <span>{{contact.name}}</span>
+                                <span class="time">12.00</span>
+                            </div>
+                            <div>
+                                <span class="last-msg">ultimo messaggio inviato</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -70,6 +89,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
