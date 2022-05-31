@@ -195,7 +195,7 @@ const contacts = new Vue({
     computed : {
         filteredContacts: function(){
             return this.contacts.filter((contact) => {
-                return contact.name.match(this.search);
+                return contact.name.toLowerCase().includes(this.search.toLowerCase());
             })
         }
     }

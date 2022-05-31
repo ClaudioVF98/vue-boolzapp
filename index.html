@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-10 p-0">
                             <label for="search"></label>
-                            <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat" class="label-search">
+                            <input type="text" v-model.trim="search" placeholder="Cerca o inizia una nuova chat" class="label-search">
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-10 px-3">
                             <div class="d-flex justify-content-between">
-                                <span>{{contact.name}}</span>
+                                <span>{{contact.name}}{{i}}</span>
                                 <span class="time">12.00</span>
                             </div>
                             <div>

@@ -92,14 +92,8 @@
 }
 
 #contatti {
-    height: 69vh;
     overflow: auto;
 }
-
-#contact-list {
-
-}
-
 
 #contatti img {
     width: 90%;
