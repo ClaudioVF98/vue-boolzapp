@@ -120,12 +120,48 @@
 
 }
 
-#msgzone {
+#row-msg {
     height: 100%;
+
+}
+
+#macro-col-8 p {
+    line-height: 18px;
 }
 
 .msg-box {
     width: 100%;
     border: 0px;
     border-radius: 7px;
+}
+
+.sent {
+    justify-content: flex-end;
+}
+
+.sent div {
+    background-color: #d5f9ba;
+    padding: 20px;
+    border-radius: 13px;
+}
+
+#msg p {
+    margin-bottom: 0;
+}
+
+.bgmsg {
+    background-color: #d5f9ba;
+}
+
+.received div {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 13px;
+}
+
+.sent div p:last-of-type, .received div p:last-of-type {
+    color: #bcc0bb;
+    font-size: 10px;
+    align-self: flex-end;
+    text-align: end;
 }
