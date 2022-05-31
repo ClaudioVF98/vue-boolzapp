@@ -57,14 +57,14 @@
                         </div>
                         <div class="col-10 p-0">
                             <label for="search"></label>
-                            <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" class="label-search">
+                            <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat" class="label-search">
                         </div>
                     </div>
                 </div>
 
                 <!-- Lista chat -->
                 <div class="row mt-2" id="contatti"> 
-                    <div class="col-12 d-flex bc-white py-3" v-for="(contact,i) in contacts" :key="i" @click="clickChat(i)">
+                    <div class="col-12 d-flex bc-white py-3" v-for="(contact,i) in filteredContacts" :key="i" @click="clickChat(i)">
                         <div class="col-2">                                                                                              
                             <img :src="contact.avatar" alt="">
                         </div>
@@ -85,7 +85,7 @@
 
             <div class="col-8 flex-column d-flex justify-content-between" id="macro-col-8">
                 <div class="row d-flex">
-                    <div class="col-12 d-flex bgea">
+                    <div class="col-12 d-flex bgea" id="contact-info">
                         <div class="col-6 d-flex justify-content-center align-items-center">
                             <div class="col-2 avatar m-2">
                                 <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
@@ -110,11 +110,13 @@
                 </div>
 
                 <div class="row m-5 d-flex flex-column" id="row-msg">
-                    <div class="d-flex flex-row py-3" id="msg" v-for="(mess,i) in contacts[activeContact].messages" :key="i"
-                    :class="mess.status == 'sent' ? 'sent' : 'received' ">
-                        <div>
-                            <p>{{mess.message}}</p>
-                            <p>15.30</p>
+                    <div>
+                        <div class="d-flex flex-row py-3" id="msg" v-for="(mess,i) in contacts[activeContact].messages" :key="i"
+                        :class="mess.status == 'sent' ? 'sent' : 'received' ">
+                            <div>
+                                <p>{{mess.message}}</p>
+                                <p>15.30</p>
+                            </div>
                         </div>
                     </div>
 

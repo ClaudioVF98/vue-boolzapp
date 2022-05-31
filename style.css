@@ -91,6 +91,16 @@
     width: 99%;
 }
 
+#contatti {
+    height: 69vh;
+    overflow: auto;
+}
+
+#contact-list {
+
+}
+
+
 #contatti img {
     width: 90%;
     border-radius: 100%;
@@ -120,9 +130,11 @@
 
 }
 
+
+
 #row-msg {
-    height: 100%;
-    overflow: auto;
+    height: 80vh;
+    overflow-y: auto;
 }
 
 #macro-col-8 p {

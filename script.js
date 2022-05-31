@@ -1,6 +1,7 @@
 const contacts = new Vue({
     el : "#app",
     data : {
+        search : '',
         activeContact : 0,
         newMsgs : "",
         contacts : [
@@ -11,22 +12,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Hello',
+                        message: '1',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '2',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '3',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '4',
                         status: 'received'
                     },
                 ]
@@ -38,22 +39,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '5',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '6',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '7',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '8',
                         status: 'received'
                     }
                 ]
@@ -65,22 +66,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '9',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '10',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '11',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '12',
                         status: 'received'
                     }
                 ]
@@ -92,22 +93,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '13',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '14',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '15',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '16',
                         status: 'received'
                     }
                 ]
@@ -119,22 +120,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '17',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '18',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '19',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '20',
                         status: 'received'
                     }
                 ]
@@ -146,22 +147,22 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '21',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '22',
                         status: 'received'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '23',
                         status: 'sent'
                     },
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: '24',
                         status: 'received'
                     }
                 ]
@@ -191,4 +192,11 @@ const contacts = new Vue({
             }, 1000);
         },
     },
+    computed : {
+        filteredContacts: function(){
+            return this.contacts.filter((contact) => {
+                return contact.name.match(this.search);
+            })
+        }
+    }
 });
