@@ -65,7 +65,7 @@
                 <!-- Lista chat -->
                 <div class="row mt-2" id="contatti">
                     <div class="col-12 d-flex bc-white py-3" v-for="(contact,i) in contacts" :key="i">
-                        <div class="col-2 avatar">                                                                                              
+                        <div class="col-2">                                                                                              
                             <img :src="contact.avatar" alt="">
                         </div>
                         <div class="col-10 px-3">
@@ -83,7 +83,55 @@
 
 
 
-            <div class="col-8" id="macro-col-8">
+            <div class="col-8 flex-column d-flex justify-content-between" id="macro-col-8">
+                <div class="row d-flex">
+                    <div class="col-12 d-flex bgea">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <div class="col-2 avatar m-2">
+                                <img src="img/avatar1.png" alt="">
+                            </div>
+                            <div class="col-10">
+                                <div class="d-flex">
+                                    <span>Michele</span>
+                                </div>
+                                <div>
+                                    <span>Ultimo accesso oggi alle 12.00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="col-6 d-flex justify-content-end align-items-center">
+                            <a href=""><i class="fa-solid fa-magnifying-glass mx-2"></i></a>
+                            <a href=""><i class="fa-solid fa-paperclip mx-2"></i></a>
+                            <a href=""><i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row"></div>
+                    <div id="msgzone">
+                </div>
+
+                <div class="row" id="textmsg">
+                    <div class="col-12 d-flex justify-content-between align-items-center">
+                        <div class="col-1 d-flex justify-content-center">
+                            <a href=""><i class="fa-regular fa-face-smile"></i></a>
+                        </div>
+
+
+                        <div class="col-10 d-flex justify-content-center">
+                            <label for="msg"></label>
+                            <input type="text" id="msg" placeholder="Scrivi un messaggio" class="msg-box">
+                        </div>
+
+
+                        <div class="col-1 d-flex justify-content-center">
+                            <a href=""><i class="fa-solid fa-microphone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>
