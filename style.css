@@ -115,14 +115,14 @@
 }
 
 #textmsg {
-    height: 60px;
+    height: 80px;
     background-color: #f3eeea;
 
 }
 
 #row-msg {
     height: 100%;
-
+    overflow: auto;
 }
 
 #macro-col-8 p {

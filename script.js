@@ -1,7 +1,8 @@
 const contacts = new Vue({
     el : "#app",
     data : {
-        currentContact : 0,
+        activeContact : 0,
+        newMsgs : "",
         contacts : [
             {
                 name: 'Michele',
@@ -10,7 +11,7 @@ const contacts = new Vue({
                 messages: [
                     {
                         time: '15:30',
-                        message: 'Ciao',
+                        message: 'Hello',
                         status: 'sent'
                     },
                     {
@@ -27,7 +28,7 @@ const contacts = new Vue({
                         time: '15:30',
                         message: 'Ciao',
                         status: 'received'
-                    }
+                    },
                 ]
             },
             {
@@ -166,5 +167,28 @@ const contacts = new Vue({
                 ]
             }
         ]       
-    }
-})
+    },
+    methods : {
+        clickChat(activeContact) {
+            this.activeContact = activeContact;
+        },
+        addItem() {
+            const msgs = {
+                time: '15:30',
+                message: this.newMsgs,
+                status: 'sent'
+            };
+            this.contacts[this.activeContact].messages.push(msgs);
+            this.newMsgs = "";
+            setTimeout(() => {
+                const answer = {
+                    time : "15:30",
+                    message : "ok",
+                    status : "received"
+                };
+                this.contacts[this.activeContact].messages.push(answer);
+
+            }, 1000);
+        },
+    },
+});
