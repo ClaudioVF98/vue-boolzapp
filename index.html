@@ -64,13 +64,13 @@
 
                 <!-- Lista chat -->
                 <div class="row mt-2" id="contatti"> 
-                    <div class="col-12 d-flex bc-white py-3" v-for="(contact,i) in filteredContacts" :key="i" @click="clickChat(i)">
+                    <div class="col-12 d-flex bc-white py-3" v-for="index in filteredContacts" :key="index" @click="clickChat(index)">
                         <div class="col-2">                                                                                              
-                            <img :src="contact.avatar" alt="">
+                            <img :src="contacts[index].avatar" alt="">
                         </div>
                         <div class="col-10 px-3">
                             <div class="d-flex justify-content-between">
-                                <span>{{contact.name}}{{i}}</span>
+                                <span>{{contacts[index].name}}</span>
                                 <span class="time">12.00</span>
                             </div>
                             <div>

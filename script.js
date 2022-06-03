@@ -194,9 +194,14 @@ const contacts = new Vue({
     },
     computed : {
         filteredContacts: function(){
-            return this.contacts.filter((contact) => {
-                return contact.name.toLowerCase().includes(this.search.toLowerCase());
-            })
-        }
+            const filteredArr = []
+            const c = this.contacts;
+            for (let i = 0; i < c.length; i++){
+                if(c[i].name.toLowerCase().includes(this.search.toLowerCase())){
+                    filteredArr.push(i)
+                }
+            }
+            return filteredArr;
+        },
     }
 });
